@@ -16,7 +16,7 @@ local cmds = {"minePlatform.lua"}
             startingGUI(3)
         else
             for i = 1, 8 do
-                os.run(cmds, "minePlatform,lua")
+                os.run(cmds, "minePlatform.lua")
             end
         end
     elseif action == 3 then
