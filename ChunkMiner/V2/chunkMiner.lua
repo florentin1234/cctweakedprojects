@@ -4,19 +4,19 @@ if tonumber(distanceDown) == nil then
     error("An argument is required!")
 end
 
-local fuelNeeded = distanceDown*256
+local fuelNeeded = tonumber(distanceDown)*256
 print("More than ".. fuelNeeded.. " fuel will be used for this action, are you sure? (Y/N)")
 term.setCursorPos(1,4)
 term.write(">")
 
 function lane()
-    for i = 1, distanceDown do
+    for i = 1, tonumber(distanceDown) do
         turtle.digDown()
-        if i < distanceDown then
+        if i < tonumber(distanceDown) then
         turtle.down()
         end
     end
-    for i = 1, distanceDown-1 do
+    for i = 1, tonumber(distanceDown)-1 do
         turtle.up()
     end
 end
